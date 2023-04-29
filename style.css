@@ -1,0 +1,218 @@
+/* header */
+
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    background: #fff;
+}
+
+.container {
+    position: absolute;
+    margin-top: -280px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container h2 {
+    font-size: 10vw;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.container h2:nth-child(1) {
+    color: #1dee0e;
+    -webkit-text-stroke: 2px 0 15px 25px rgba(56, 242, 140, 0.6);
+}
+
+.container h2:nth-child(2) {
+    color: #207a0d;
+    animation: animate 4s ease-in-out infinite;
+}
+
+@keyframes animate {
+    0%,
+    100% {
+        clip-path: polygon( 0% 45%, 16% 44%, 33% 50%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
+    }
+    50% {
+        clip-path: polygon( 0% 60%, 15% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
+    }
+}
+ 
+/* sidebar */
+
+.navbar {
+    position: absolute;
+    height: 100vh;
+    background-color: rgb(0, 99, 0);
+    padding: 24px;
+    color: #48e64a;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    transition-property: all;
+    transition-duration: 200ms;
+    transition-timing-function: ease-in-out;
+  }
+  
+  .navbar:hover {
+    padding-right: 115px;
+  }
+  
+  .navbar a {
+    height: 36px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .navbar a span {
+    position: absolute;
+    width: 100px;
+    left: -100px;
+    opacity: 0;
+    transition-property: all;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+    text-align: left;
+  }
+  
+  .navbar:hover a span {
+    opacity: 1;
+    left: 0px;
+    margin-left: 50px;
+  }
+  
+  .navbar a i {
+    width: 20px;
+  }
+  
+  .navbar a:hover {
+    cursor: pointer;
+    color: white;
+  }
+  
+  .active {
+    color: white;
+  }
+
+.navbar {
+    position: absolute;
+    height: 100vh;
+    background-color: rgb(0, 99, 0);
+    padding: 24px;
+    color: #48e64a;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    transition-property: all;
+    transition-duration: 200ms;
+    transition-timing-function: ease-in-out;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+/* Quadrados de fotos*/
+
+/*arquivo*/ 
+.container {
+    margin-top: 20px;
+  }
+  
+  .well {
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .well .file-input {
+    cursor: pointer;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 99;
+    /*This makes the button huge. If you want a bigger button, increase the font size*/
+    font-size: 50px;
+    /*Opacity settings for all browsers*/
+    opacity: 0;
+    -moz-opacity: 0;
+    filter: progid: DXImageTransform.Microsoft.Alpha(opacity=0)
+  }
+  
+  .well i {
+    font-size: 15rem;
+    text-shadow: 10px 10px 10px #646464;
+  }
+  
+  .well .clear i {
+    font-size: 2.5rem;
+  }
+  
+  .well img {
+    width: 100%;
+    height: 280px;
+  }
+  
